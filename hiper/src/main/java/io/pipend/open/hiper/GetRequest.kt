@@ -71,7 +71,8 @@ class GetRequest(
             content = bytes,
             stream = stream,
             headers = headers,
-            isSuccessful = response.isSuccessful
+            isSuccessful = response.isSuccessful,
+            url = request.url.toString()
         )
     }
 
@@ -104,7 +105,8 @@ class GetRequest(
                     content = bytes,
                     stream = stream,
                     headers = headers,
-                    isSuccessful = response.isSuccessful
+                    isSuccessful = response.isSuccessful,
+                    url = request.url.toString()
                 )
                 callback?.invoke(hiperResponse)
             }

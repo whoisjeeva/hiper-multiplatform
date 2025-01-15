@@ -12,7 +12,8 @@ data class HiperResponse(
     var stream: InputStream? = null,
     val headers: Headers = Headers(),
     var isSuccessful: Boolean = false,
-    var error: IOException? = null
+    var error: IOException? = null,
+    var url: String? = null
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
