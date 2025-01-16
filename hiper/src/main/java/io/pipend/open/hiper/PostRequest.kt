@@ -109,7 +109,7 @@ class PostRequest(
             stream = stream,
             headers = headers,
             isSuccessful = response.isSuccessful,
-            url = request.url.toString()
+            url = response.request.url.toString()
         )
     }
 
@@ -143,7 +143,7 @@ class PostRequest(
                     stream = stream,
                     headers = headers,
                     isSuccessful = response.isSuccessful,
-                    url = request.url.toString()
+                    url = response.request.url.toString()
                 )
                 callback?.invoke(hiperResponse)
             }
